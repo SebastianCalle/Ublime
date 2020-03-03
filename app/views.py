@@ -5,4 +5,10 @@ from django.shortcuts import render
 def home(request):
     # Home view
     context = {}
-    return render(request, "base.html", context)
+    return render(request, "home.html", context)
+
+
+def singup_view(request):
+    # Home view
+    context = {}
+    return render(request, "app/singup.html", context)
