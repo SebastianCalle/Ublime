@@ -8,38 +8,53 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <title>Hello, world!</title>
+    <title>Ublime app</title>
   </head>
   <body>
-    <header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+      <a href="/" class="nabvar-brand">
+        <img src="{% static 'img/logo-ublime.png'%}" alt="logo" height="50px">
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-grow-0 ml-auto" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+      </div>
+      <button class="btn btn-success ml-10 mr-2">Sing Up</button>
+      <button class="btn btn-danger ml-10 mr-2">Log In</button>
 
-      <nav class="navbar navbar-expand-lg navbar-dark black">
-          <div class="container">
-              <a class="navbar-brand" href="#"><strong>Ublime</strong></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Log In</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Sing UP</a>
-                  </li>
-              </ul>
-          </div>
-      </nav>
-    </header>
+    </nav>
+    <h1>Hello, world!</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
