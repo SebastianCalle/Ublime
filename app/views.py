@@ -16,3 +16,13 @@ def singup_provider_view(request):
     # Home view
     context = {}
     return render(request, "app/singup_provider.html", context)
+
+def user_interface(request):
+    # Home view
+    context = {}
+    return render(request, "app/user_interface.html", context)
+
+def test(request):
+    # Home view
+    context = {}
+    return render(request, "app/test.html", context)
