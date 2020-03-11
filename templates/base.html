@@ -38,8 +38,11 @@
         </div>
         <a href="#" class="btn btn-success btn-sm ml-10 mr-2">Sing Up</a>
         <a href="#" class="btn btn-outline-info btn-sm ml-10 mr-2">Log In</a>
-
+        <span><a class='btn btn-warning'href="{% url 'LogoutPage' %}"> Logout </a></span>
+        <span class="text-light">Hello: {{ request.user }}</span>
       </div>
+
+
     </nav>
     {% block content %}
 
