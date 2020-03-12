@@ -19,12 +19,12 @@ def home(request):
     context = {}
     return render(request, "home.html", context)
 
-def singup_user_view(request):
+def singupUser(request):
     # Home view
     context = {}
-    return render(request, "app/singup_user.html", context)
+    return render(request, "app/singup-user.html", context)
 
-def LoginPage(request):
+def loginPage(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
@@ -40,11 +40,11 @@ def LoginPage(request):
         context = {}
         return render(request, "app/login.html", context)
 
-def LogoutPage(request):
+def logoutPage(request):
     logout(request)
-    return redirect('LoginPage')
+    return redirect('loginPage')
 
-def singup_provider_view(request):
+def singupProvider(request):
     if request.user.is_authenticated:
         return  redirect('home')
 
@@ -61,20 +61,20 @@ def singup_provider_view(request):
                     user=user,
                 )
                 messages.success(request, 'Account was created for  ' + UserName)
-                return redirect('LoginPage')
+                return redirect('loginPage')
 
         context = {'form': form}
-        return render(request, "app/singup_provider.html", context)
+        return render(request, "app/singup-provider.html", context)
 
-def UserInterface(request):
+def userInterface(request):
     # View for user
     objects = Toilet.objects.all()
     context = {
         'objects': objects
     }
-    return render(request, "index.html", context)
-    
-def ProviderView(request):
+    return render(request, "user-interface.html", context)
+
+def providerInterface(request):
     # View for Provider
     form = ToiletForm()
     if (request.method == "POST"):
@@ -97,7 +97,7 @@ def ProviderView(request):
     context = {'form': form}
     return render(request, "app/provider-interface.html", context)
 
-def CreateToilet(request):
+def createToilet(request):
     '''Creating view for CRUD: this es for Create'''
 
     form = ToiletForm()
@@ -106,18 +106,13 @@ def CreateToilet(request):
         if form.is_valid():
             form.save()
     context = {'form': form}
-    return render(request, "app/Toilet_form.html", context)
+    return render(request, "app/toilet-form.html", context)
 
-def CreateProvider(request):
+def createProvider(request):
     Pform = ProviderForm()
     if request.method == 'POST':
         Pform = ProviderForm(request.POST)
         if Pform.is_valid():
              Pform.save()
     context = {'form': Pform}
-    return render(request, 'app/Provider_form.html', context)
-
-def toilets(request):
-    objects = Toilet.objects.all()
-    extend = {'objs': objects}
-    return render(request, 'app/toilets.html', extend)
+    return render(request, 'app/provider-form.html', context)
