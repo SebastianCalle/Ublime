@@ -1,66 +1,87 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<div class="container">
-  <div class="card bg-light mt-5 pt-5">
-  <article class="card-body mx-auto" style="max-width: 400px;">
-  	<h4 class="card-title mt-3 text-center">Create Account as Provider</h4>
-  	<p class="text-center">Get started with your free account</p>
-  	<p>
-  		<a href="" class="btn btn-block btn-primary">Sing Up with Google</a>
-  		<a href="" class="btn btn-block btn-primary">Sing Up with Facebook</a>
-  	</p>
-  	<p class="divider-text">
-          <span class="bg-light">OR</span>
-      </p>
-  	<form>
-  	<div class="form-group input-group">
-  		<div class="input-group-prepend">
-  		   <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-  		</div>
-      <input name="" class="form-control" placeholder="First name" type="text">
-    </div> <!-- form-group// -->
-  	<div class="form-group input-group">
-  		<div class="input-group-prepend">
-  		  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-  		</div>
-      <input name="" class="form-control" placeholder="Last name" type="text">
-    </div> <!-- form-group// -->
-      <div class="form-group input-group">
-      	<div class="input-group-prepend">
-  		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-  		 </div>
-          <input name="" class="form-control" placeholder="Email address" type="email">
-      </div> <!-- form-group// -->
-      <div class="form-group input-group">
-      	<div class="input-group-prepend">
-  		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-  		</div>
-  		<select class="custom-select" style="max-width: 120px;">
-  		    <option selected="">+57</option>
-  		</select>
-      	<input name="" class="form-control" placeholder="Phone number" type="text">
-      </div> <!-- form-group// -->
-      <div class="form-group input-group">
-      	<div class="input-group-prepend">
-  		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-  		</div>
-          <input class="form-control" placeholder="Create password" type="password">
-      </div> <!-- form-group// -->
-      <div class="form-group input-group">
-      	<div class="input-group-prepend">
-  		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-  		</div>
-          <input class="form-control" placeholder="Repeat password" type="password">
-      </div> <!-- form-group// -->
-      <div class="form-group">
-          <button type="submit" class="btn btn-warning btn-block"> Create Account  </button>
-      </div> <!-- form-group// -->
-      <p class="text-center">Have an account? <a href="">Log In</a> </p>
-  </form>
-  </article>
-  </div> <!-- card.// -->
+<<div class="container">
+ 	 <div class="card bg-light mt-5 pt-5">
+		 <article class="card-body mx-auto" style="max-width: 400">
+  			<h4 class="card-title mt-3 text-center">Create Account as Provider</h4>
+  			<p class="text-center">Get started with your free account</p>
+  			<p>
+  				<a href="" class="btn btn-block btn-primary">Sing Up with Google</a>
+  				<a href="" class="btn btn-block btn-primary">Sing Up with Facebook</a>
+  			</p>
+  			<p class="divider-text">
+          		<span class="bg-light">OR</span>
+     		 </p>
+  			<form method="POST" action="">
+				{% csrf_token %}
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+						</div>
+						<input placeholder="Username" {{form.username}}>
 
+					</div>
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+						</div>
+						<input placeholder="First Name" {{form.first_name}}>
+
+					</div>
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+						</div>
+						<input placeholder="Last Name" {{form.last_name}}>
+					 </div>
+					 <div class="form-group input-group">
+						<div class="input-group-prepend">
+						  <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+						 </div>
+						  <input placeholder="Email" {{form.email}}>
+					 </div>
+					<div class="form-group input-group">
+						<div class="input-group-prepend">
+							 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+						</div>
+						<input placeholder="Password" {{form.password1}}>
+					 </div>
+				  	<div class="form-group input-group">
+						<div class="input-group-prepend">
+							 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+						</div>
+						 <input placeholder="Repeat Password" {{form.password2}}>
+				  	</div>
+				 <div class="form-group">
+					 <button type="submit" class="btn btn-warning btn-block"> Create Account  </button>
+				 </div>
+				  <p class="text-center">Have an account? <a href="{% url 'LoginPage' %}"> Log In</a> </p>
+ 		 	</form>
+		 </article>
+	 </div>
 </div>
+<!--<div class="mt-5 pt-5">
+	<form method="POST" action="">
 
+			{{form.username.label}}
+			{{form.username}}
+
+			{{form.first_name.label}}
+			{{form.first_name}}
+
+			{{form.last_name.label}}
+			{{form.last_name}}
+
+			{{form.email.label}}
+			{{form.email}}
+
+			{{form.password1.label}}
+			{{form.password1}}
+
+			{{form.password2.label}}
+			{{form.password2}}
+
+		<input type="submit" name="Create Provider">
+	</form>
+&lt;!&ndash;&ndash;&gt;	</div>-->
 {% endblock content %}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Los banhos papi</title>
+</head>
+<body>
+{% for obj in objs %}
+   <h2> {{obj.description}}</h2>
+   <img src="{{obj.image_1}}" style="{width:50px, higth:50px}">
+{% endfor %}
+</body>
+</html>
