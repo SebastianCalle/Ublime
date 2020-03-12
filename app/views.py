@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.contrib.gis.geos import GEOSGeometry
+from .models import  Toilet
+from .forms import ToiletForm
 
 # Create your views here.
 
@@ -26,3 +29,26 @@ def test(request):
     # Home view
     context = {}
     return render(request, "app/test.html", context)
+
+def ProviderView(request):
+    # View for Provider
+    form = ToiletForm()
+    if (request.method == "POST"):
+        print(request.POST)
+        data = request.POST
+        address = data['address']
+        accesible = False
+        longitude = data['longitude']
+        latitude = data['latitude']
+        point = "POINT({} {})".format(longitude, latitude)
+        location = GEOSGeometry(point, srid=4326)
+        image = data['image']
+        #new_toilet = Toilet(address=address,
+                            # accesible=accesible,
+                            # latitude=latitude,
+                            # longitude=longitude,
+                            # location=location,
+                            # image=image)
+    # new_toilet.save()
+    context = {'form': form}
+    return render(request, "app/provider-interface.html", context)

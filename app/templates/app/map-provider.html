@@ -1,0 +1,61 @@
+{% load static %}
+<script>
+      let movil = false;
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+           movil = true;
+        }
+
+      // Marker default
+      let defaultMarker = L.icon({
+          iconUrl: "{% static 'img/marker.png' %}",
+          iconSize:     [30, 30],
+      });
+      // Marker when is activate
+      let activeMarker = L.icon({
+          iconUrl: "{% static 'img/marker-active.png' %}",
+          iconSize:     [30, 30],
+      });
+
+      let personalMarker = L.icon({
+          iconUrl: "{% static 'img/marker-personal.png' %}",
+          iconSize:     [30, 30],
+      });
+
+
+      // function that put the markers into the map
+      function map_init_basic (map, options) {
+        function location (map) {
+          let current_position, current_accuracy;
+
+          function onLocationFound(e) {
+            // if position defined, then remove the existing position marker and accuracy circle from the map
+            if (current_position) {
+                map.removeLayer(current_position);
+            }
+            current_position = L.marker(e.latlng, { icon: personalMarker, draggable: true}).on('mouseup', onClick).addTo(map)
+            position = e.latlng;
+            document.getElementById("id_latitude").value = position['lat']
+            document.getElementById("id_longitude").value = position['lng']
+          }
+          function onLocationError(e) {
+            alert(e.message);
+          }
+          map.on('locationfound', onLocationFound);
+          map.on('locationerror', onLocationError);
+          // wrap map.locate in a function
+          function locate() {
+            map.locate({setView: true, maxZoom: 16});
+          }
+          // call locate every 3 seconds... forever
+          locate();
+       }
+      location(map);
+      let position;
+      function onClick (e) {
+        position = e.latlng;
+        document.getElementById("id_latitude").value = position['lat']
+        document.getElementById("id_longitude").value = position['lng']
+        console.log(position);
+      }
+    }
+  </script>

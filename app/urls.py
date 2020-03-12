@@ -7,5 +7,6 @@ urlpatterns = [
     path("singup_user", views.singup_user_view),
     path("singup_provider", views.singup_provider_view),
     path("user-interface", views.user_interface),
+    path('provider-interface', views.ProviderView, name="provider"),
     path("test", views.test),
 ]

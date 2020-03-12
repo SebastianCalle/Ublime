@@ -1,0 +1,45 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load leaflet_tags %}
+
+{% block head %}
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <style type="text/css"  >
+      .leaflet-control-attribution{
+        display: none;
+      }
+    </style>
+{% endblock head %}
+{% block content %}
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-6">
+
+        <h2>Create a toilet</h2>
+        <form method="POST" class="post-form">{% csrf_token %}
+          {% for field in form %}
+          <div class="form-goup">
+            <!-- {{ field.label_tag }} {{ field }} -->
+            {% if 'latitude' in field.label_tag %}
+              {{ field.as_hidden }}
+            {% elif 'longitude' in field.label_tag %}
+              {{ field.as_hidden }}
+            {% else %}
+              {{ field.errors }}
+              <p>{{ field.label_tag }} {{ field }}</p>
+            {% endif %}
+          </div>
+          {% endfor %}
+          <button type="submit" class="save btn btn-info">Save</button>
+        </form>
+      </div>
+      <div class="col-6">
+        {% leaflet_map "map" callback="window.map_init_basic" %}
+      </div>
+    </div>
+  </div>
+  {% include 'app/map-provider.html' %}
+
+
+{% endblock content %}

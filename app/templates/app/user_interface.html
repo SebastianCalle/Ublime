@@ -2,20 +2,31 @@
 {% load static %}
 {% load leaflet_tags %}
 
+{% block head %}
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <style type="text/css"  >
+      .leaflet-control-attribution{
+        display: none;
+      }
+    </style>
+
+{% endblock head %}
+
 {% block content %}
   <!-- show api maps -->
   <div class="container mt-5 pt-5 text-center">
-    <h2 class="display-3">Search your Toilet</h2>
+    <h2 class="display-4">Search your Toilet</h2>
     <div class="row">
-      <div class="col-12 mt-2" style="height: 400px;">
+      <div class="col-12 mt-2">
        {% leaflet_map "map" callback="window.map_init_basic" %}
       </div>
-    <div class="mt-3">
+    </div>
+    <div class="my-4">
       <a href="#" class="btn btn-success center-block btn-lg">Go Go Go</a>
     </div>
-  </div>
 
-  <div class="container mt-5 pt-5">
+  <div class="container">
     <div class="row">
       <div class="col-12 bg-info" style="height: 400px;">
         <h1 class="title text-center"></h1>

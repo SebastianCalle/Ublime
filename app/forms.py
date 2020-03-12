@@ -8,3 +8,4 @@ from .models import Toilet
 class ToiletForm(ModelForm):
     class Meta():
         model = Toilet
+        fields = '__all__'
