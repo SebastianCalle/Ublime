@@ -4,6 +4,7 @@ import uuid
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.contrib.gis.db import  models as geo_models
 
 
 # Create your models here.
@@ -11,7 +12,10 @@ class Toilet(models.Model):
     toilet_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_id = models.ForeignKey('Costumer', on_delete=models.CASCADE)
     provider_id = models.ForeignKey('Provider', on_delete=models.CASCADE)
-    ubication = models.CharField(max_length=200)
+    latitude = models.DecimalField(max_digits=10, decimal_places=8)
+    longitude = models.DecimalField(max_digits=10, decimal_places=8)
+    location = geo_models.PointField(srid=4326)
+    address = models.CharField(max_length=100, blank=True)
     image = models.FilePathField(path=None, match=None, recursive=False, null=True)
     description = models.CharField(max_length=200)
     accesibility = models.BooleanField(default=False)
