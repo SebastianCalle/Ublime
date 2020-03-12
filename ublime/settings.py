@@ -129,6 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (4.6097102, -74.081749),
