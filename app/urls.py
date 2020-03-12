@@ -10,4 +10,5 @@ urlpatterns = [
     path("CreateProvider", views.CreateProvider, name="CreateProvider"),
     path("LoginPage", views.LoginPage, name="LoginPage"),
     path("LogoutPage", views.LogoutPage, name="LogoutPage"),
+    path('toilets', views.toilets, name="toilets")
 ]

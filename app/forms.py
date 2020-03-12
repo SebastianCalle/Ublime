@@ -10,7 +10,7 @@ from .models import Toilet, Provider
 class ToiletForm(ModelForm):
     class Meta():
         model = Toilet
-        fields = ['provider_id', 'ubication', 'description', 'accesibility']
+        fields = ['provider_id', 'ubication', 'description', 'accesibility', 'image_1']
 
 class ProviderForm(ModelForm):
     class Meta():

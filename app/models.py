@@ -10,9 +10,9 @@ class Toilet(models.Model):
     toilet_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     provider_id = models.ForeignKey('Provider', on_delete=models.SET_NULL, null=True)
     ubication = models.CharField(max_length=200, null=True)
-    image_1 = models.ImageField(upload_to='static/img', null=True)
-    image_2 = models.ImageField(upload_to='static/img', null=True)
-    image_3 = models.ImageField(upload_to='static/img', null=True)
+    image_1 = models.ImageField(upload_to='img/', null=True)
+    image_2 = models.ImageField(upload_to='img/', null=True)
+    image_3 = models.ImageField(upload_to='img/', null=True)
     description = models.CharField(max_length=200, null=True)
     accesibility = models.BooleanField(default=False, null=True)
     created_at = models.DateTimeField('Created time', auto_now_add=True, null=True)
@@ -23,6 +23,7 @@ class Toilet(models.Model):
 
 class Provider(models.Model):
     provider_id = models.UUIDField(primary_key=True, default=uuid.uuid4(), editable=False)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=200, null=True)
     last_name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
@@ -36,6 +37,7 @@ class Provider(models.Model):
 
 class Costumer(models.Model):
     user_id = models.UUIDField(primary_key=True, default=uuid.uuid4(), editable=False)
+
     first_name = models.CharField(max_length=200, null=True)
     last_name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
