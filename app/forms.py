@@ -1,16 +1,16 @@
 from django.forms import ModelForm
 from django import  forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User, Group
 from leaflet.forms.widgets import LeafletWidget
 from leaflet.forms.fields import PointField
 
 from .models import Toilet, Provider
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User, Group
 
 class ToiletForm(ModelForm):
     class Meta():
         model = Toilet
-        fields = ['provider_id', 'address', 'description', 'accesibility', 'image_1']
+        fields = ['address', 'latitude', 'longitude', 'image_1', 'image_2', 'image_3', 'description', 'accesibility']
 
 class ProviderForm(ModelForm):
     class Meta():

@@ -57,10 +57,9 @@ def singupProvider(request):
                 UserName = form.cleaned_data.get('username')
                 group = Group.objects.get(name='Provider')
                 user.groups.add(group)
-                Provider.objects.create(
-                    user=user,
-                )
+                Provider.objects.create(user=user,)
                 messages.success(request, 'Account was created for  ' + UserName)
+
                 return redirect('loginPage')
 
         context = {'form': form}
@@ -78,8 +77,9 @@ def providerInterface(request):
     # View for Provider
     form = ToiletForm()
     if (request.method == "POST"):
-        print(request.POST)
+        print("esto es form", form)
         data = request.POST
+        print("esto es data ",data)
         address = data['address']
         accesible = False
         longitude = data['longitude']
@@ -87,7 +87,7 @@ def providerInterface(request):
         point = "POINT({} {})".format(longitude, latitude)
         location = GEOSGeometry(point, srid=4326)
         image = data['image']
-        #new_toilet = Toilet(address=address,
+        # new_toilet = Toilet(address=address,
                             # accesible=accesible,
                             # latitude=latitude,
                             # longitude=longitude,

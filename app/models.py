@@ -27,9 +27,9 @@ class Toilet(models.Model):
         return self.description
 
 class Provider(models.Model):
-    provider_id = models.UUIDField(primary_key=True, default=uuid.uuid4(), editable=False)
+    # provider_id = models.UUIDField(primary_key=True, default=uuid.uuid4(), editable=False)
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=200, null=True)
+    first_name = models.CharField(max_length=200, null=False)
     last_name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
     phone = models.IntegerField(blank=True, null=True)

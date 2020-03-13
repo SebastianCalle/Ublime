@@ -8,8 +8,8 @@ urlpatterns = [
     path("user-interface", views.userInterface, name="userInterface"),
     path('provider-interface', views.providerInterface, name="providerInterface"),
     path("singup-provider", views.singupProvider, name="singupProvider"),
-    path("CreateToilet", views.createToilet, name="createToilet"),
-    path("CreateProvider", views.createProvider, name="createProvider"),
-    path("LoginPage", views.loginPage, name="loginPage"),
-    path("LogoutPage", views.logoutPage, name="logoutPage"),
+    path("create-toilet", views.createToilet, name="createToilet"),
+    path("create-provider", views.createProvider, name="createProvider"),
+    path("login-page", views.loginPage, name="loginPage"),
+    path("logout-page", views.logoutPage, name="logoutPage"),
 ]
