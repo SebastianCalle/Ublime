@@ -5,7 +5,8 @@ from django.contrib.auth.models import User, Group
 from leaflet.forms.widgets import LeafletWidget
 from leaflet.forms.fields import PointField
 
-from .models import Toilet, Provider
+from .models import Toilet
+# , Provider
 
 class ToiletForm(ModelForm):
     class Meta():
@@ -14,7 +15,7 @@ class ToiletForm(ModelForm):
 
 class ProviderForm(ModelForm):
     class Meta():
-        model = Provider
+        model = User
         fields = '__all__'
 
 class CreateProviderForm(UserCreationForm):

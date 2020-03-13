@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, User
 from django.contrib.auth.models import Group
 from django.contrib.gis.geos import GEOSGeometry
-from .models import Provider, Toilet
+from .models import Toilet
 from .forms import ToiletForm
 
 
@@ -57,7 +57,8 @@ def singupProvider(request):
                 UserName = form.cleaned_data.get('username')
                 group = Group.objects.get(name='Provider')
                 user.groups.add(group)
-                Provider.objects.create(user=user,)
+                # Provider.objects.create(user=user,)
+                user.save()
                 messages.success(request, 'Account was created for  ' + UserName)
 
                 return redirect('loginPage')
@@ -71,29 +72,32 @@ def userInterface(request):
     context = {
         'objects': objects
     }
-    return render(request, "user-interface.html", context)
+    return render(request, "app/user-interface.html", context)
 
 def providerInterface(request):
     # View for Provider
     form = ToiletForm()
     if (request.method == "POST"):
-        print("esto es form", form)
         data = request.POST
-        print("esto es data ",data)
+        files = request.FILES
+        user = User.objects.get(pk=request.user.id)
         address = data['address']
-        accesible = False
+        accesible = data['accesibility'].capitalize()
         longitude = data['longitude']
         latitude = data['latitude']
+        description = data['description']
         point = "POINT({} {})".format(longitude, latitude)
         location = GEOSGeometry(point, srid=4326)
-        image = data['image']
-        # new_toilet = Toilet(address=address,
-                            # accesible=accesible,
-                            # latitude=latitude,
-                            # longitude=longitude,
-                            # location=location,
-                            # image=image)
-    # new_toilet.save()
+        image_1 = files['image_1']
+        image_2 = files['image_2']
+        image_3 = files['image_3']
+        new_toilet = Toilet(user=user, address=address,
+                            latitude=latitude, longitude=longitude,
+                            location=location, image_1=image_1,
+                            image_2=image_2, image_3=image_3,
+                            description=description, accesibility=accesible
+                            )
+        new_toilet.save()
     context = {'form': form}
     return render(request, "app/provider-interface.html", context)
 

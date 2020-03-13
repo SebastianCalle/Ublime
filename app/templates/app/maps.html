@@ -53,7 +53,7 @@
           setInterval(locate, 3000);
        }
       {% for obj in objects %}
-        marker = L.marker([{{obj.location.y}}, {{ obj.location.x }}], { icon: defaultMarker, direction: '{{ obj.address }}', image: '{{ obj.imge }}'});
+        marker = L.marker([{{obj.location.y}}, {{ obj.location.x }}], { icon: defaultMarker, direction: '{{ obj.address }}', image: '{{ obj.image_1 }}'});
         marker.on('click', onClick);
         map.addLayer(marker);
       {% endfor %}
@@ -75,7 +75,7 @@
       if (movil === false) {
         // CREATE CARD FOR DISPLAY TOILETS
         let a = $('.title').html(info.direction).addClass('display-4')
-        let img = $('.title-img').html(info.image).addClass('display-4')
+        let img = $('.img-1').attr('src', info.image);
       } else {
         Swal.fire({
           title: info.direction,
