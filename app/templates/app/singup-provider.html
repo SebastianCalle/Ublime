@@ -13,6 +13,9 @@
   			<p class="divider-text">
           		<span class="bg-light">OR</span>
      		 </p>
+         <div class="container">
+            <p>{{ form.errors }}</p>
+         </div>
   			<form method="POST" action="">
 				{% csrf_token %}
 					<div class="form-group input-group">

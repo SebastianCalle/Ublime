@@ -31,13 +31,13 @@
             // if position defined, then remove the existing position marker and accuracy circle from the map
             if (current_position) {
                 map.removeLayer(current_position);
-                // map.removeLayer(current_accuracy);
+                map.removeLayer(current_accuracy);
             }
 
-            // let radius = e.accuracy / 2;
+            let radius = e.accuracy / 2;
 
             current_position = L.marker(e.latlng, { icon: personalMarker}).addTo(map)
-            // current_accuracy = L.circle(e.latlng, radius).addTo(map);
+            current_accuracy = L.circle(e.latlng, radius).addTo(map);
           }
 
           function onLocationError(e) {
@@ -47,13 +47,13 @@
           map.on('locationerror', onLocationError);
           // wrap map.locate in a function
           function locate() {
-            map.locate({setView: true, maxZoom: 18});
+            map.locate({setView: true, maxZoom: 20});
           }
           // call locate every 3 seconds... forever
           setInterval(locate, 3000);
        }
       {% for obj in objects %}
-        marker = L.marker([{{obj.location.y}}, {{ obj.location.x }}], { icon: defaultMarker, direction: '{{ obj.address }}', image: '{{ obj.image_1 }}'});
+        marker = L.marker([{{obj.location.y}}, {{ obj.location.x }}], { icon: defaultMarker, direction: '{{ obj.address }}', img_1: '{{ obj.image_1 }}', img_2: '{{ obj.image_2 }}', img_3: '{{ obj.image_3 }}',  description: '{{ obj.description }}', accesibility: '{{ obj.accesibility }}'});
         marker.on('click', onClick);
         map.addLayer(marker);
       {% endfor %}
@@ -75,12 +75,15 @@
       if (movil === false) {
         // CREATE CARD FOR DISPLAY TOILETS
         let a = $('.title').html(info.direction).addClass('display-4')
-        let img = $('.img-1').attr('src', info.image);
+        let img_1 = $('.img-1').attr('src', "static/" + info.img_1);
+        let img_2 = $('.img-2').attr('src', "static/" + info.img_2);
+        let img_3 = $('.img-3').attr('src', "static/" + info.img_3);
+        let desc = $('.desc').html(info.description)
       } else {
         Swal.fire({
           title: info.direction,
-          text: 'Modal with a custom image.',
-          imageUrl: 'https://unsplash.it/400/200',
+          imageUrl: "static/" + info.image,
+          text: info.description,
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: 'Custom image',
