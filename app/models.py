@@ -4,6 +4,7 @@ import uuid
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User, Group
+from django.conf import settings
 from django.contrib.gis.db import  models as geo_models
 
 
@@ -11,7 +12,7 @@ from django.contrib.gis.db import  models as geo_models
 class Toilet(models.Model):
     toilet_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     # provider_id = models.ForeignKey('Provider', on_delete=models.SET_NULL, null=True)
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.CASCADE)
     address = models.CharField(max_length=200, null=True)
     latitude = models.DecimalField(max_digits=10, decimal_places=8)
     longitude = models.DecimalField(max_digits=10, decimal_places=8)

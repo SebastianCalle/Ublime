@@ -8,7 +8,7 @@
       // Marker default
       let defaultMarker = L.icon({
           iconUrl: "{% static 'img/marker.png' %}",
-          iconSize:     [50, 50],
+          iconSize:     [30, 30],
       });
       // Marker when is activate
       let activeMarker = L.icon({
@@ -78,7 +78,8 @@
         let img_1 = $('.img-1').attr('src', "static/" + info.img_1);
         let img_2 = $('.img-2').attr('src', "static/" + info.img_2);
         let img_3 = $('.img-3').attr('src', "static/" + info.img_3);
-        let desc = $('.desc').html(info.description)
+        let desc = $('.description').html(info.description);
+        let accesibility = $('.accesibility').html(info.accesibilityA);
       } else {
         Swal.fire({
           title: info.direction,
