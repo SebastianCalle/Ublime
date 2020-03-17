@@ -22,9 +22,10 @@
        <a href="{% url 'singupProvider' %}" class="btn btn-success btn-sm ml-10 mr-2">Sing Up</a>
        <a href="{% url 'loginPage' %}" class="btn btn-outline-info btn-sm ml-10 mr-2">Log In</a>
        <span><a class='btn btn-warning mr-2'href="{% url 'logoutPage' %}"> Logout </a></span>
-        {% if request.user.is_authenticated %}
-             <span class="text-light mr-2 ">Hello: {{ request.user}}</span>
-         {% endif %}
+
+       {% if request.user.is_authenticated %}
+         <span class="text-light mr-2 ">Hello: {{ request.user }}</span>
+       {% endif %}
      </div>
    </nav>
  </div>

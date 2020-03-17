@@ -11,9 +11,9 @@
             <p class="text-justify mt-5">
               If you need so fast a toiltet click in the GO GO GO button and share you ubication. But, if you only want
               to check our web application stay here and start with about Ublime.
-            </p>
+            </
           </div>
-          <div class="col-md-6 col-lg 6 header-content-right">
+          <div class="col-md-6 col-lg 6 header-content-right mt-3">
           <img src="{% static 'img/header-right.jpg'%}" style="width: 100%;" alt="Candelaria">
           </div>
         </div>
@@ -28,8 +28,10 @@
         </p>
         <h4>- Yesid Gutierrez</h4>
       </div>
+      <div class="text-center">
+        <a href="#" class="btn btn-dark">Ublimemes...</a>
+      </div>
     </section>
-
     <!-- info -->
     <section id="about">
       <div class="container mt-5 my-5">
@@ -49,6 +51,40 @@
       </div>
     </section>
 
+    <!-- our team -->
+
+    <!-- Page Content -->
+    <section id="team">
+      <div class="container justify-content-between my-5 py-5">
+        <h2 class="text-center">OUR TEAM</h2>
+        <div class="row mt-3">
+          <!-- Team Member 1 -->
+          <div class="col-xl-6 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+              <img src="{% static 'img/sebastian.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title mb-0">Sebastian Montealegre.</h5>
+                <div class="card-text text-black-50">Software Engineer</div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="col-xl-6 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+              <img src="{% static 'img/yesid.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title mb-0">Yesid Gutierrez</h5>
+                <div class="card-text text-black-50">Pisasuave</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+  </section>
+
+  <!-- contact info -->
     <section id="contact">
       <div class="container my-5">
         <div class="row py-5">
@@ -68,9 +104,9 @@
                   SEND
                 </button>
                 </div>
-              </div>
             </form>
-            <div class="col-md-5 text-center contact-right">
+          </div>
+          <div class="col-md-5 text-center contact-right">
               <h2>Contact</h2>
               <p class="mt-5">
                 That's Ok, send to our team a email with your comments, don't worry you can write anything, but rememberg!
@@ -79,9 +115,6 @@
             </div>
           </div>
         </div>
-        </div>
-      </div>
-
       </div>
     </section>
 {% endblock content %}
