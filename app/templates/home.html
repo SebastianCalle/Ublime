@@ -1,0 +1,123 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- header -->
+    <header id="header">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-med-6 col-lg-6 header-content-left">
+            <h2 class="display-4">release your ublime</h2>
+            <p class="text-justify mt-5">
+              If you need so fast a toiltet click in the SEARCH TOILET button and share you ubication. But, if you only want
+              to check our web application stay here and start with about Ublime.
+            </p>
+            <div class="text-center"><a href="{% url 'userInterface' %}" class="btn btn-info text-center mv-3">SEARCH TOILET</a></div>
+          </div>
+          <div class="col-md-6 col-lg 6 header-content-right mt-3">
+          <img src="{% static 'img/header-right.jpg'%}" style="width: 100%;" alt="Candelaria">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- testimonial -->
+    <section id="testimonial">
+      <div class="container mt-5 mb-3">
+        <p class="h5">
+          <b><i>"The World Health Organization will affect November 19 as World Toilet Day to raise awareness among the
+          population that the toilet is a staple object whose attention is cause of disease"
+          </i></b>
+        </p>
+<!--        <h4>- Yesid Gutierrez</h4>-->
+      </div>
+      <div class="text-center">
+        <a href="#" class="btn btn-dark">More Info</a>
+      </div>
+    </section>
+    <!-- info -->
+    <section id="about">
+      <div class="container mt-5 my-5">
+        <div class="row">
+          <div class="col-md-6 cl-lg-6 about-left">
+            <img src="{% static 'img/cerdotoilet.jpg'%}" style="width: 100%;" alt="Bogota">
+          </div>
+          <div class="col-md-6 col-lg-6 about-right my-auto">
+            <h3 class="text-center mb-5 mt-5">About Ublime</h3>
+            <p>
+              Ublime is an democratic application web that help you to find a public toilet closer to yo, but,
+              if yo prefert a better toilet with a lot space, best toilet paper, and it doesn't smell like a toilet
+            </p>
+            <a href="#" class="btn btn-outline-success btn-lg about-btn">Register</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our team -->
+
+    <!-- Page Content -->
+    <section id="team">
+      <div class="container justify-content-between my-5 py-5">
+        <h2 class="text-center">OUR TEAM</h2>
+        <div class="row mt-3">
+          <!-- Team Member 1 -->
+          <div class="col-xl-6 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+              <img src="{% static 'img/sebastian.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title mb-0">Sebastian Montealegre.</h5>
+                <div class="card-text text-black-50">El Brayan</div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="col-xl-6 col-md-6 mb-4">
+            <div class="card border-0 shadow">
+              <img src="{% static 'img/yesid.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title mb-0">Yesid Gutierrez</h5>
+                <div class="card-text text-black-50">LaMeraMaquina</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+  </section>
+
+  <!-- contact info -->
+    <section id="contact">
+      <div class="container my-5">
+        <div class="row py-5">
+          <div class="col-md7 contact-left">
+            <form class="card" action="contact.html" method="post">
+              <div class="card-body">
+                <div class="form-group">
+                  <input type="text" placeholder="Name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" rows="10" cols="50" class="form-control"></textarea>
+                </div>
+                <button type="submit" name="submit" class="btn btn-outline-info btn-block">
+                  SEND
+                </button>
+                </div>
+            </form>
+          </div>
+          <div class="col-md-5 text-center contact-right">
+              <h2>Contact</h2>
+              <p class="mt-5">
+                That's Ok, send to our team a email with your comments, don't worry you can write anything, but rememberg!
+                be polite and respectful.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load leaflet_tags %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <style type="text/css"  >
+      .leaflet-control-attribution{
+        display: none;
+      }
+    </style>
+{% endblock head %}
+{% block content %}
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center display-3">Create a toilet</h2>
+        <div class="col-12">
+          {% leaflet_map "map" callback="window.map_init_basic" %}
+        </div>
+
+        <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+           <div class="row mt-5">
+          <div class="form-group col-12 mb-0">
+              {{ form.address|as_crispy_field }}
+          </div>
+          </div>
+            <div class="row">
+            <div class="form-group col-4">
+              {{ form.image_1| as_crispy_field }}
+            </div>
+            <div class="form-group col-4">
+              {{ form.image_2 | as_crispy_field}}
+            </div>
+            <div class="form-group col-4">
+              {{ form.image_3 | as_crispy_field}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm-12 col-lg-10 mb-0">
+              {{ form.description|as_crispy_field }}
+            </div>
+            <div class="form-group col-sm-12 col-lg-2 mb-0">
+              {{ form.accesibility|as_crispy_field }}
+            </div>
+          </div>
+          <div class="row">
+            {{ form.latitude.as_hidden }}
+            {{ form.longitude.as_hidden }}
+          </div>
+          <button type="submit" class="save btn btn-info">Save</button>
+          <a href={% url 'home' %} class="btn btn-outline-danger">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% include 'app/map-provider.html' %}
+
+
+{% endblock content %}

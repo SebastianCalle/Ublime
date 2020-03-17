@@ -1,0 +1,96 @@
+{% load static %}
+   <script>
+      let movil = false;
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+           movil = true;
+        }
+
+      // Marker default
+      let defaultMarker = L.icon({
+          iconUrl: "{% static 'img/marker.png' %}",
+          iconSize:     [30, 30],
+      });
+      // Marker when is activate
+      let activeMarker = L.icon({
+          iconUrl: "{% static 'img/marker-active.png' %}",
+          iconSize:     [30, 30],
+      });
+
+      let personalMarker = L.icon({
+          iconUrl: "{% static 'img/marker-personal.png' %}",
+          iconSize:     [30, 30],
+      });
+
+
+      // function that put the markers into the map
+      function map_init_basic (map, options) {
+        function location (map) {
+          let current_position, current_accuracy;
+
+          function onLocationFound(e) {
+            // if position defined, then remove the existing position marker and accuracy circle from the map
+            if (current_position) {
+                map.removeLayer(current_position);
+                map.removeLayer(current_accuracy);
+            }
+
+            let radius = e.accuracy / 2;
+
+            current_position = L.marker(e.latlng, { icon: personalMarker}).addTo(map)
+            current_accuracy = L.circle(e.latlng, radius).addTo(map);
+          }
+
+          function onLocationError(e) {
+            alert(e.message);
+          }
+          map.on('locationfound', onLocationFound);
+          map.on('locationerror', onLocationError);
+          // wrap map.locate in a function
+          function locate() {
+            map.locate({setView: true, maxZoom: 20});
+          }
+          // call locate every 3 seconds... forever
+          setInterval(locate, 3000);
+       }
+      {% for obj in objects %}
+        marker = L.marker([{{obj.location.y}}, {{ obj.location.x }}], { icon: defaultMarker, direction: '{{ obj.address }}', img_1: '{{ obj.image_1 }}', img_2: '{{ obj.image_2 }}', img_3: '{{ obj.image_3 }}',  description: '{{ obj.description }}', accesibility: '{{ obj.accesibility }}'});
+        marker.on('click', onClick);
+        map.addLayer(marker);
+      {% endfor %}
+      location(map);
+    }
+
+    // function that show the info
+    let eventBackup;
+    function onClick (e) {
+      let info = this.options;
+      e.target.setIcon(activeMarker);
+      if (eventBackup == undefined) {
+        eventBackup = e;
+      } else {
+        eventBackup.target.setIcon(defaultMarker);
+        eventBackup = e;
+      }
+      // config how to show the info in movil or cp
+      if (movil === false) {
+        // CREATE CARD FOR DISPLAY TOILETS
+        let a = $('.title').html(info.direction).addClass('display-4')
+        let img_1 = $('.img-1').attr('src', "static/" + info.img_1);
+        let img_2 = $('.img-2').attr('src', "static/" + info.img_2);
+        let img_3 = $('.img-3').attr('src', "static/" + info.img_3);
+        let desc = $('.description').html(info.description);
+        let accesibility = $('.accesibility').html(info.accesibilityA);
+      } else {
+        Swal.fire({
+          title: info.direction,
+          imageUrl: "static/" + info.image,
+          text: info.description,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+          showCloseButton: true,
+        })
+      }
+    }
+
+  </script>

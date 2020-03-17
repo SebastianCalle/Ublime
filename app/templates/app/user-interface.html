@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load leaflet_tags %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/user-interface.css' %}">
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <style type="text/css">
+      .leaflet-control-attribution{
+        display: none;
+      }
+    </style>
+
+{% endblock head %}
+
+{% block content %}
+  <!-- show api maps -->
+  <div class="container mt-5 pt-5 text-center">
+    <h2 class="display-4">Search your Toilet</h2>
+    <div class="row">
+      <div class="col-12 mt-2">
+       {% leaflet_map "map" callback="window.map_init_basic" %}
+      </div>
+    </div>
+    <div class="my-4">
+      <a href="#" class="btn btn-success center-block btn-lg putMarkers">Go Go Go</a>
+    </div>
+
+  <div class="container">
+    <h3 class="title text-center display-4"></h3>
+    <div class="row">
+        <div class="col-sm-12 col-lg-4 mb-2">
+          <img src="" alt="" class="rounded float-left img-1">
+        </div>
+        <div class="col-sm-12 col-lg-4 mb-2">
+          <img src="" alt="" class="rounded float-center img-2">
+        </div>
+        <div class="col-sm-12 col-lg-4 mb-2">
+          <img src="" alt="" class="rounded float-right img-3">
+        </div>
+      </div>
+    </div>
+    <p class="description mt-5"></p>
+    <p class="accesibility"></p>
+  </div>
+{% include 'app/maps.html' %}
+{% endblock content %}

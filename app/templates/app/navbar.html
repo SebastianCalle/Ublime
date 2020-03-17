@@ -1,0 +1,31 @@
+ <!-- nav bar -->
+ <div class="container-fluid mb-5">
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end fixed-top">
+     <div class="container">
+
+       <a href="/" class="nabvar-brand">
+         <h5 class="text-info"><i class="fa fa-fire"></i>Ublime</h5>
+       </a>
+       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse flex-grow-0 ml-auto" id="navbar">
+         <ul class="navbar-nav text-right">
+             <li class="nav-item active">
+                 <a class="nav-link" href="#about">About</a>
+             </li>
+             <li class="nav-item active">
+                 <a class="nav-link" href="#contact">Contact</a>
+             </li>
+         </ul>
+       </div>
+       <a href="{% url 'singupProvider' %}" class="btn btn-success btn-sm ml-10 mr-2">Sing Up</a>
+       <a href="{% url 'loginPage' %}" class="btn btn-outline-info btn-sm ml-10 mr-2">Log In</a>
+       <span><a class='btn btn-warning mr-2'href="{% url 'logoutPage' %}"> Logout </a></span>
+
+       {% if request.user.is_authenticated %}
+         <span class="text-light mr-2 ">Hello: {{ request.user }}</span>
+       {% endif %}
+     </div>
+   </nav>
+ </div>
