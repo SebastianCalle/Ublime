@@ -22,9 +22,7 @@
         </div>
 
         <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
-          {% csrf_token %}
-            <div class="row mt-5">
-
+           <div class="row mt-5">
           <div class="form-group col-12 mb-0">
               {{ form.address|as_crispy_field }}
           </div>
@@ -53,6 +51,7 @@
             {{ form.longitude.as_hidden }}
           </div>
           <button type="submit" class="save btn btn-info">Save</button>
+          <a href={% url 'home' %} class="btn btn-outline-danger">Cancel</a>
         </form>
       </div>
     </div>
