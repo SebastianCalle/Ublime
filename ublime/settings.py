@@ -24,9 +24,9 @@ BASE_TEMPLATES = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'yic)wf*ab_d0n0&#rj*6thke1!sejk$%!j7ag8qnjg&eimk5*#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,6 +81,9 @@ WSGI_APPLICATION = 'ublime.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+import dj_database_url
+
+DATABASES = { 'default' : dj_database_url.config()}
 
 DATABASES = {
         'default': {
