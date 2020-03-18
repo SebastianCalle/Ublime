@@ -144,4 +144,6 @@ LEAFLET_CONFIG = {
     'MIN_ZOOM': 10,
     'MAX_ZOMM': 18,
 }
+GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
+GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
 django_heroku.settings(locals())
