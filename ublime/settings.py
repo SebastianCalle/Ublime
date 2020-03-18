@@ -25,7 +25,7 @@ SECRET_KEY = 'yic)wf*ab_d0n0&#rj*6thke1!sejk$%!j7ag8qnjg&eimk5*#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ublime.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
