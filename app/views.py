@@ -120,3 +120,9 @@ def createProvider(request):
              Pform.save()
     context = {'form': Pform}
     return render(request, 'app/provider-form.html', context)
+
+def moreInfo(request):
+    return render(request, 'app/more-info.html')
+
+def toiletRequirements(request):
+    return render(request, 'app/toilet-requirements.html')
