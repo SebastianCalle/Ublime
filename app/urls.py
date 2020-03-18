@@ -14,4 +14,6 @@ urlpatterns = [
     path("create-provider", views.createProvider, name="createProvider"),
     path("login-page", views.loginPage, name="loginPage"),
     path("logout-page", views.logoutPage, name="logoutPage"),
+    path("more-info", views.moreInfo, name="moreInfo"),
+    path('toilet-requirements', views.toiletRequirements, name="toiletRequirements"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
