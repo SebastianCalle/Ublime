@@ -15,32 +15,56 @@
             <div class="text-center"><a href="{% url 'userInterface' %}" class="btn btn-info text-center mv-3">SEARCH TOILET</a></div>
           </div>
           <div class="col-md-6 col-lg 6 header-content-right mt-3">
-          <img src="{% static 'img/header-right.jpg'%}" style="width: 100%;" alt="Candelaria">
+          <img src="{% static 'img/nicetoilet.jpg'%}" style="width: 100%;" alt="Candelaria">
           </div>
         </div>
       </div>
     </header>
+  <section id="carusel">
+       <div class="container mt-5 py-4" >
+          <div id="carouselContent" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active text-center p-4">
+                    <div class="container px-5">
+                      <p class="px-4"><b><i>"The World Health Organization will affect November 19 as World Toilet Day to raise awareness
+                      among the population that the toilet is a staple object whose attention is cause of disease"
+                    </i></b></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item text-center p-4">
+                      <p>
+                        <b><i>Barcelona University research reveals that a mobile phone has more germs than a toilet.
+                        </i></b>
+                      </p>
+                  </div>
+                <div class="carousel-item text-center p-4">
+                      <p>
+                        <b><i>We spend 1.5 years in the bathroom.
+                        </i></b>
+                      </p>
+                  </div>
 
-    <!-- testimonial -->
-    <section id="testimonial">
-      <div class="container mt-5 mb-3">
-        <p class="h5">
-          <b><i>"The World Health Organization will affect November 19 as World Toilet Day to raise awareness among the
-          population that the toilet is a staple object whose attention is cause of disease"
-          </i></b>
-        </p>
-<!--        <h4>- Yesid Gutierrez</h4>-->
-      </div>
-      <div class="text-center">
-        <a href="#" class="btn btn-dark">More Info</a>
-      </div>
-    </section>
-    <!-- info -->
+              </div>
+         <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+              </a>
+          </div>
+
+            <div class="text-center">
+              <a href="#" class="btn btn-dark">More Info</a>
+            </div>
+        </div>
+  </section>
     <section id="about">
       <div class="container mt-5 my-5">
         <div class="row">
           <div class="col-md-6 cl-lg-6 about-left">
-            <img src="{% static 'img/cerdotoilet.jpg'%}" style="width: 100%;" alt="Bogota">
+            <img src="{% static 'img/cerdotoilet.jpg'%}" style="width: 70%; height: 90%" alt="Bogota">
           </div>
           <div class="col-md-6 col-lg-6 about-right my-auto">
             <h3 class="text-center mb-5 mt-5">About Ublime</h3>
