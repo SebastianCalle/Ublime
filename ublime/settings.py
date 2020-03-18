@@ -24,9 +24,9 @@ BASE_TEMPLATES = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'yic)wf*ab_d0n0&#rj*6thke1!sejk$%!j7ag8qnjg&eimk5*#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -81,10 +81,6 @@ WSGI_APPLICATION = 'ublime.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-import dj_database_url
-
-DATABASES = { 'default' : dj_database_url.config()}
-
 DATABASES = {
         'default': {
             'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -95,6 +91,9 @@ DATABASES = {
             'PORT': '',                      # Set to empty string for default.
         }
     }
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
 
 
 # Password validation
@@ -145,6 +144,4 @@ LEAFLET_CONFIG = {
     'MIN_ZOOM': 10,
     'MAX_ZOMM': 18,
 }
-GDAL_LIBRARY_PATH = os.getenv('GDAL_LIBRARY_PATH')
-GEOS_LIBRARY_PATH = os.getenv('GEOS_LIBRARY_PATH')
 django_heroku.settings(locals())
