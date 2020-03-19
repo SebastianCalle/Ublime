@@ -90,8 +90,8 @@ DATABASES = {
             'PORT': '',                      # Set to empty string for default.
         }
     }
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+#import dj_database_url
+#DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 
@@ -143,4 +143,4 @@ LEAFLET_CONFIG = {
     'MIN_ZOOM': 10,
     'MAX_ZOMM': 18,
 }
-django_heroku.settings(locals())
+#django_heroku.settings(locals())

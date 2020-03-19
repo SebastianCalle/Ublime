@@ -16,4 +16,5 @@ urlpatterns = [
     path("logout-page", views.logoutPage, name="logoutPage"),
     path("more-info", views.moreInfo, name="moreInfo"),
     path('toilet-requirements', views.toiletRequirements, name="toiletRequirements"),
+    path('dashboard', views.dashboard, name='dashboard'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

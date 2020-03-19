@@ -74,9 +74,13 @@ def userInterface(request):
     }
     return render(request, "app/user-interface.html", context)
 
+#@login_required
 def providerInterface(request):
     # View for Provider
+    if not request.user.is_authenticated:
+        return  redirect('loginPage')
     form = ToiletForm()
+
     if (request.method == "POST"):
         data = request.POST
         files = request.FILES
@@ -98,6 +102,7 @@ def providerInterface(request):
                             description=description, accesibility=accesible
                             )
         new_toilet.save()
+        return redirect('dashboard')
     context = {'form': form}
     return render(request, "app/provider-interface.html", context)
 
@@ -126,3 +131,8 @@ def moreInfo(request):
 
 def toiletRequirements(request):
     return render(request, 'app/toilet-requirements.html')
+
+def dashboard(request):
+    objs = Provider.objects.get(all)
+    context = {'objs': objs}
+    return render(request, 'app/dashboard.html', context)
