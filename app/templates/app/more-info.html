@@ -1,49 +1,99 @@
 {% extends 'app/base.html' %}
 {% load static %}
 
-{% block content %}
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-     <div class="container px-5">
-              <img class="d-block w-100" src="static/img/NiceToilet.jpg" alt="First slide">
-             <p class="px-4">
-                 <b><i>"Why Ublime??
-                     Ublime seeks to help the population with access to clean baths, with inclusive services and
-                     adequate to the different generational and physical needs of today's citizens
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/more-info.css' %}">
 
-                 </i></b>
-             </p>
-         </div>
+{% endblock head %}
+{% block content %}
+<!-- Page Content -->
+<div class="container mt-5 pt-5">
+
+  <!-- Page Heading -->
+  <h1 class="my-4">Some topics
+    <small>That maybe you don't know</small>
+  </h1>
+
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{% static 'img/NiceToilet.jpg' %}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">¿Why Ublime?</a>
+          </h4>
+            <p class="card-text">Ublime seeks to help the population with access to clean baths, with inclusive services and
+                adequate to the different generational and physical needs of today's citizens</p>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-         <div class="container px-5">
-              <img class="d-block w-100" src="static/img/badtoilet.jpg" alt="Second slide">
-             <p class="px-4">
-                 <b><i>Water Aid estimates that nearly $ 260 billion is lost annually to preventable diseases caused by a
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{% static 'img/badtoilet.jpg' %}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Water Aid estimates that nearly $ 260 billion </a>
+          </h4>
+          <p class="card-text">Lost annually to preventable diseases caused by a
                      lack of sanitary conditions. "If more was invested in sanitation, people and environments would be healthier,
-                     and the struggling economies could have a better workforce."
-                 </i></b>
-             </p>
-         </div>
+                     and the struggling economies could have a better workforce."</p>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-       <div class="container px-5">
-              <img class="d-block w-100" src="static/img/badtoilet.jpg" alt="Third slide">
-             <p class="px-4">
-                 <b><i>
-                 </i></b>
-             </p>
-         </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{% static 'img/covid19.jpg' %}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Wash your hands frequently</a>
+          </h4>
+          <p class="card-text"> Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.
+
+Why? Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands..</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{% static 'img/social-distance.jpg' %}" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#"> Maintain social distancing</a>
+          </h4>
+          <p class="card-text">Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing.
+
+Why? When someone coughs or sneezes they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person coughing has the disease .</p>
+        </div>
+      </div>
+    </div>
+ </div>
+  <!-- /.row -->
+
+  <!-- Pagination -->
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+    </li>
+  </ul>
+
 </div>
+<!-- /.container -->
 {% endblock %}
