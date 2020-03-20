@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock head %}
+{% block content %}
+<div class="container mt-5 pt-5 h-100">
+    <div class="row justify-content-between">
+        <div class="col-4">
+            <p>The username <h2><b><i class="display-5"> {{ request.user }} </i></b></h2> have the next toilets:</p>
+        </div>
+        <div class="col-4 align-self-center">
+         <a class="btn btn-lg btn-primary" href="{% url 'providerInterface' %}">Create</a>
+        </div>
+    </div>
+
+
+    <table class="table table-sm">
+            <tr>
+                <th>ADDRESS</th>
+                <th>IMAGE 1</th>
+                <th>IMAGE 2</th>
+                <th>IMAGE 3</th>
+                <th>DESCRIPTION</th>
+                <th>ACCESIBLE</th>
+            </tr>
+
+        {% for ojs in objs %}
+           <tr>
+               <td>{{ojs.address}}</td>
+               <td><img class="image1" src="static/{{ ojs.image_1 }}"></td>
+               <td><img class="image2" src="static/{{ ojs.image_2 }}"></td>
+               <td><img class="image3" src="static/{{ ojs.image_3 }}"></td>
+               <td> {{ojs.description}}</td>
+               <td>Acessible:{{ojs.accesibility}}</td>
+               <td><a class="btn btn-sm btn-secondary" href="">Update</a></td>
+               <td><a class="btn btn-sm btn-danger" href="">Delete</a></td>
+           </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock content%}
