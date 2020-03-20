@@ -12,7 +12,10 @@
               If you need so fast a toiltet click in the SEARCH TOILET button and share you ubication. But, if you only want
               to check our web application stay here and start with about Ublime.
             </p>
-            <div class="text-center"><a href="{% url 'userInterface' %}" class="btn btn-info text-center mv-3">SEARCH TOILET</a></div>
+            <div class="d-flex justify-content-between">
+              <a href="{% url 'userInterface' %}" class="btn btn-info mv-3">SEARCH TOILET</a>
+              <a href="{% url 'providerInterface' %}" class="btn btn-secondary mv-3">REGISTER TOILET</a>
+            </div>
           </div>
           <div class="col-md-6 col-lg 6 header-content-right mt-3">
           <img src="{% static 'img/nicetoilet.jpg'%}" style="width: 100%;" alt="Candelaria">
@@ -69,7 +72,7 @@
           <div class="col-md-6 col-lg-6 about-right my-auto">
             <h3 class="text-center mb-5 mt-5">About Ublime</h3>
             <p class="text-justify">
-              Ublime is an democratic application web that help you to find a public toilet closer to yo, but, if you
+              Ublime is an democratic application web that help you to find a public toilet closer to you, but, if you
               prefer a better toilet with a lot space, best toilet paper, and it doesn't smell like a toilet; Ublime can
               solve that for you. Do you have an space or a restroom / toilet that you think will be a best restroom / toilet
               in your area please register this in the Register bottom

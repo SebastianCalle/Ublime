@@ -103,7 +103,7 @@ def providerInterface(request):
                             description=description, accesibility=accesible
                             )
         new_toilet.save()
-        return redirect('dashboard')
+        # return redirect('dashboard')
     context = {'form': form}
     return render(request, "app/provider-interface.html", context)
 
