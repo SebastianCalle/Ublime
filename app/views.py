@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -34,7 +35,7 @@ def loginPage(request):
             User = authenticate(username=UserName, password=Password)
             if User is not None:
                 login(request, User)
-                return redirect('home')
+                return redirect('dashboard')
             else:
                 messages.info(request, 'Username or Password is incorrect')
         context = {}
@@ -133,6 +134,8 @@ def toiletRequirements(request):
     return render(request, 'app/toilet-requirements.html')
 
 def dashboard(request):
-    objs = Provider.objects.get(all)
+    if not request.user.is_authenticated:
+        return redirect('loginPage')
+    objs = Toilet.objects.filter(user=request.user)
     context = {'objs': objs}
     return render(request, 'app/dashboard.html', context)
