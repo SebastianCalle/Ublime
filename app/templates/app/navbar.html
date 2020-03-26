@@ -23,9 +23,10 @@
        <a href="{% url 'loginPage' %}" class="btn btn-outline-info btn-sm ml-10 mr-2">Log In</a>
        <span><a class='btn btn-warning mr-2'href="{% url 'logoutPage' %}"> Logout </a></span>
 
+       <!-- show when the user is authenticated -->
        {% if request.user.is_authenticated %}
          <span class="text-light mr-2 ">Hello: {{ request.user }}</span>
        {% endif %}
-             </div>
+    </div>
    </nav>
  </div>

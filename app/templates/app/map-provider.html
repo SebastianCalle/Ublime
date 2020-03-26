@@ -1,10 +1,10 @@
 {% load static %}
 <script>
+      // check if using app from movil or pc
       let movil = false;
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
            movil = true;
         }
-
       // Marker default
       let defaultMarker = L.icon({
           iconUrl: "{% static 'img/marker.png' %}",
@@ -15,12 +15,11 @@
           iconUrl: "{% static 'img/marker-active.png' %}",
           iconSize:     [30, 30],
       });
-
+      // Marker current position
       let personalMarker = L.icon({
           iconUrl: "{% static 'img/marker-personal.png' %}",
           iconSize:     [30, 30],
       });
-
 
       // function that put the markers into the map
       function map_init_basic (map, options) {
@@ -51,6 +50,7 @@
        }
       location(map);
       let position;
+      // function for have latitude and longitude
       function onClick (e) {
         position = e.latlng;
         document.getElementById("id_latitude").value = position['lat']

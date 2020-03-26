@@ -133,6 +133,7 @@ STATICFILES_DIRS = (
 )
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
+# configuration of the maps leaflet
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (4.6097102, -74.081749),
     'DEFAULT_ZOOM': 13,

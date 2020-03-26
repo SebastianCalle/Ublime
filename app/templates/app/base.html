@@ -15,16 +15,20 @@
 
     <!-- Optional JavaScript -->
     <title>Ublime app</title>
+    <!-- block head base for all templates -->
     {% block head %}
     {% endblock head %}
   </head>
   <body class="ub-body" style="{height: 100%}">
+    <!-- navbar for the base template -->
     {% include 'app/navbar.html' %}
+    <!-- content base of other templates   -->
     {% block content %}
 
 
     {% endblock content %}
     <br>
+    <!-- footer for all templates -->
     {% include 'app/footer.html' %}
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

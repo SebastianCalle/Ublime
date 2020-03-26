@@ -9,6 +9,7 @@ from .models import Toilet
 # , Provider
 
 class ToiletForm(ModelForm):
+    # Form for create toilet
     class Meta():
         model = Toilet
         fields = ['address', 'latitude', 'longitude', 'image_1', 'image_2', 'image_3', 'description', 'accesibility']

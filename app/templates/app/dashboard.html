@@ -5,9 +5,10 @@
 {% endblock head %}
 {% block content %}
 <div class="container mt-5 pt-5 h-100">
+    <!-- User information and button for create toilet -->
     <div class="row justify-content-between">
-        <div class="col-4">
-            <p>The username <h2><b><i class="display-5"> {{ request.user }} </i></b></h2> have the next toilets:</p>
+        <div class="col-8">
+            <p>The username<font size="6"><b><i> {{ request.user }} </i></b></font> have the next toilets:</p>
         </div>
         <div class="col-4 align-self-center">
          <a class="btn btn-lg btn-primary" href="{% url 'providerInterface' %}">Create</a>
@@ -15,6 +16,7 @@
     </div>
 
 
+    <!-- table for show toilets -->
     <table class="table table-sm">
             <tr>
                 <th>ADDRESS</th>
