@@ -17,6 +17,7 @@
 					<h3 id="form-title">LOGIN</h3>
 				</div>
 				<div class="d-flex justify-content-center form_container">
+          <!-- form for register of providers -->
 					<form method="POST" action="">
                         {% csrf_token %}
 						<div class="input-group mb-3">
@@ -38,16 +39,14 @@
 					</form>
 
 				</div>
-
+                <!-- display error message  -->
                 {% for message in messages %}
                     <p id="messages" >{{message}}</p>
                 {% endfor %}
-
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Don't have an account? <a href="{% url 'singupProvider' %}" class="ml-2">Sign Up</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
