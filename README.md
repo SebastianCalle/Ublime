@@ -2,13 +2,17 @@
 <img width="260" height="170" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
 </p>
 <p>
-<img width="260" height="170" src="static/img/MrUblime5.png" align="right" >
+<img width="260" height="170" src="static/img/MrUblime5.png" align="left" >
 </p>
 
 # :colombia: Ublime
 
 
-## Examples                                                                     
+## Introduccion
+Ublime is an app that help you to find a restroom/toilet near to you.
+<p>
+<video src="https://www.youtube.com/watch?v=3q8mkka59KU&feature=emb_logo" width="320" height="200" controls preload></video>
+</p>
 ## Prerequisites
 
 ## Installing
@@ -28,8 +32,18 @@ for my learning in Holberton School
 
 ## Authors
 
+---Juan Sebastian Montealegre 948@holbertonschool.com
 ---Yesid Gutierrez  944@holbertonshcool.com                                    
-                                                                               
+
+Project Name
+Introduction
+Must include link to your deployed site, final project blog article, author(s) LinkedIn
+Installation
+Usage
+Contributing
+Related projects
+Licensing
+
 ## Files
 
 |             File               |             Description                  |
