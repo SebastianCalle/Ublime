@@ -11,7 +11,7 @@
 <p align="center">
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank" align="center"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
-alt="Ublime web app"></a>
+alt="Ublime web app" width="640" height="480></a>
 </p>
 
 
