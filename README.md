@@ -1,6 +1,6 @@
 <div>
 <img width="260" height="260" src="static/img/MrUblime5.png" align="left" >
-<img width="" height="" src="" align="center" >
+<img width="100" height="100" src="" align="center" >
 <img width="260" height="170" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
 </div>
 # :colombia: Ublime
