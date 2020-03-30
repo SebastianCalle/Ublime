@@ -2,7 +2,18 @@
 <img width="260" height="170" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
 <img width="260" height="260" src="static/img/MrUblime5.png" align="left" >
 </p>
+<pre>
 
+
+
+
+
+
+
+
+
+
+</pre>
 # :colombia: Ublime
 
 
@@ -12,7 +23,7 @@ Ublime is an app that help you to find a restroom/toilet near to you.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
-alt="Ublime web app" width="" height="180" border="10" align="center" /></a>
+alt="Ublime web app" width="520" height="260" border="10" align="center" /></a>
 
 
 ## Prerequisites
