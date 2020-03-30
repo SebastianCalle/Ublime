@@ -6,12 +6,11 @@
 </br>
 </br>
 </br>
-</br>
 <p align="center">:colombia:<b>UBLIME</b></p>
 </br>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank" align="center"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
-alt="Ublime web app" style="max-width:100%></a>
+alt="Ublime web app" align="center"></a>
 
 
 ## Introduccion
