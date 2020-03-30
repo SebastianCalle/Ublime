@@ -7,10 +7,10 @@
 
 
 
-<p align="center"># :colombia: Ublime </p>
+<p align="center"> :colombia: #**UBLIME** </p>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
-alt="Ublime web app" width="520" height="260" border="10" align="center" /></a>
+alt="Ublime web app" width="520" height="260" border="10" align="center"></a>
 
 
 ## Introduccion
