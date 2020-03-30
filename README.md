@@ -7,15 +7,11 @@
 </br>
 </br>
 </br>
-</br>
-</br>
-</br>
 <p align="center">:colombia:<b>UBLIME</b></p>
-</br>
 </br>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank" align="center"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
-alt="Ublime web app" width="640" height="400" border="10" align="center"></a>
+alt="Ublime web app" style="max-width:100%></a>
 
 
 ## Introduccion
