@@ -3,11 +3,16 @@
 <img width="260" height="260" src="static/img/whiteBackground.jpg" align="center" >
 <img width="260" height="170" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
 </div>
-
-
-
-
-#<p align="center">:colombia:<font size="48"><b>UBLIME</b></font></p>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p align="center">:colombia:<b>UBLIME</b></p>
+</br>
+</br>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank" align="center"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
 alt="Ublime web app" width="640" height="400" border="10" align="center"></a>
