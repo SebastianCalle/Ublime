@@ -7,9 +7,9 @@
 
 
 
-<p align="center">:colombia:<font size="24"><b>UBLIME</b></font></p>
+#<p align="center">:colombia:<font size="48"><b>UBLIME</b></font></p>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
-" target="_blank"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
+" target="_blank" align="center"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
 alt="Ublime web app" width="640" height="400" border="10" align="center"></a>
 
 
