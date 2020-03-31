@@ -12,7 +12,7 @@
 " target="_blank"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
 alt="Ublime web app"></a>
 
-<img [![UBLIME WEB APP](https://img.youtube.com/vi/3q8mkka59KU/0.jpg)](https://www.youtube.com/watch?v=3q8mkka59KU)>
+[![UBLIME WEB APP](https://img.youtube.com/vi/3q8mkka59KU/0.jpg) align="center"](https://www.youtube.com/watch?v=3q8mkka59KU)
 
 
 ## Introduccion
