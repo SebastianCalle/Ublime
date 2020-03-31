@@ -12,10 +12,11 @@
   <p align="center">**********click on the image for a video demonstration**********</p>
 </div>
 
-
+</br>
 ## Introduccion
 Ublime is an application web that help you when you have physiological emergency, so easy to use. Share your geoposition, Ublime search for you three near restroom/toilets and finally start your path.
 
+</br>
 ## Check Ublime blogs
 Sebastian and Yesid wrote some interesting experiences during Ublime develop, if you feel curios check their blogs
 |             Blog               |             Author                  |
@@ -23,6 +24,7 @@ Sebastian and Yesid wrote some interesting experiences during Ublime develop, if
 |**https://medium.com/@948/my-experience-building-ublime-app-5a2ee6d21725**| by Sebastian Montealegre|
 |**https://medium.com/@944/ublime-web-application-280929825a3d**| by Yesid Gutierrez|
 
+</br>
 ## Installation/Use
 you don't need install anything, only type the web page and start the experience www.hereisublimepage.com
 
@@ -49,10 +51,12 @@ you don't need install anything, only type the web page and start the experience
 <p align="center">*******check facilities/forbbiden anr click on Ride me button. You don't need more, It's all, so easy*******</p>
 </br>
 
+</br>
 ## Roles
 - Provider: If you have a restroom/toilet to give service, you can register like a provider
 - User: You don't need to register.
 
+</br>
 ## Contributing
 
 |             Name               |             GitHub                  |             LinkedIn                |
@@ -60,6 +64,7 @@ you don't need install anything, only type the web page and start the experience
 |**Juan Sebastian Montealegre**| https://github.com/SebastianCalle|https://www.linkedin.com/in/juan-sebastian-calle/
 |**Yesid Gutierrez**|https://github.com/Yesidh|https://www.linkedin.com/in/yesid-gutierrez-9577a5b3/|
 
+</br>
 ## Build With
 - Python: Backend language
 - django/leaflet: Web development Framework
@@ -67,8 +72,11 @@ you don't need install anything, only type the web page and start the experience
 - Bootstrap - Frontend
 - JavaScript - Frontend
 
+</br>
 ## Future
 Create own restrooms for Ublime
 
+</br>
 ## Licensing
 This project is licensed under the MIT License
+</br>
