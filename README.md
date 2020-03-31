@@ -4,8 +4,6 @@
 <img width="200" height="150" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
 </div>
 </br>
-</br>
-</br>
 <p align="center">:colombia:<b>UBLIME</b></p>
 </br>
 <div align="center">
