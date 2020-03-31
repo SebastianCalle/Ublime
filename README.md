@@ -24,27 +24,34 @@ Sebastian and Yesid wrote some interesting experiences during Ublime develop, if
 
 ## Installation/Use
 you don't need install anything, only type the web page and start the experience www.hereisublimepage.com
+
 <p align="center"><b>**********Quick Guide**********</b></p>
+
 <div>
-<img width="" height="" src="static/img/Ublimestart.png" align="center" >
+  <img width="" height="" src="static/img/Ublimestart.png" align="center" >
 </div>
+
 <p align="center">**********Share your position**********</p>
 </br>
+
 <div>
-<img width="" height="" src="static/img/UblimeMap.png" align="center" >
+  <img width="" height="" src="static/img/UblimeMap.png" align="center" >
 </div>
+
 <p align="center">**********Choice one of the Three, shows in the map**********</p>
-<div>
 </br>
+
 <div>
-<img width="" height="" src="static/img/ToiletUblime.png" align="center" >
+  <img width="" height="" src="static/img/ToiletUblime.png" align="right" >
 </div>
+
 <p align="center">**********check facilities/forbbiden anr click on Ride me button. You don't need more, It's all, so easy**********</p>
 </br>
 
 ## Roles
 - Provider: If you have a restroom/toilet to give service, you can register like a provider
 - User: You don't need to register.
+
 ## Contributing
 
 |             Name               |             GitHub                  |             LinkedIn                |
