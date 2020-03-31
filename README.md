@@ -50,33 +50,32 @@ you don't need install anything, only type the web page and start the experience
 
 <p align="center">*******check facilities/forbbiden anr click on Ride me button. You don't need more, It's all, so easy*******</p>
 </br>
-
 </br>
+
 ## Roles
 - Provider: If you have a restroom/toilet to give service, you can register like a provider
 - User: You don't need to register.
-
 </br>
+
 ## Contributing
 
 |             Name               |             GitHub                  |             LinkedIn                |
 |--------------------------------| ------------------------------------|-------------------------------------|
 |**Juan Sebastian Montealegre**| https://github.com/SebastianCalle|https://www.linkedin.com/in/juan-sebastian-calle/
 |**Yesid Gutierrez**|https://github.com/Yesidh|https://www.linkedin.com/in/yesid-gutierrez-9577a5b3/|
-
 </br>
+
 ## Build With
 - Python: Backend language
 - django/leaflet: Web development Framework
 - Postgres/Postgis - Database
 - Bootstrap - Frontend
 - JavaScript - Frontend
-
 </br>
+
 ## Future
 Create own restrooms for Ublime
-
 </br>
+
 ## Licensing
 This project is licensed under the MIT License
-</br>
