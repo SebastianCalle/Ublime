@@ -1,14 +1,15 @@
 <div>
-<img width="180" height="180" src="static/img/MrUblime5.png" align="left" >
-<img width="260" height="260" src="static/img/whiteBackground.jpg" align="center" >
-<img width="200" height="150" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
+  <img width="180" height="180" src="static/img/MrUblime5.png" align="left" >
+  <img width="260" height="260" src="static/img/whiteBackground.jpg" align="center" >
+  <img width="200" height="150" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
 </div>
+
 <p align="center">:colombia:<b>**********UBLIME**********</b></p>
 
 <div align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
-" target="_blank"><img width="900" height="480" src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" alt="Ublime web app"></a>
-<p align="center">**********click on the image for a video demonstration**********</p>
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
+  " target="_blank"><img width="900" height="480" src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" alt="Ublime web app"></a>
+  <p align="center">**********click on the image for a video demonstration**********</p>
 </div>
 
 
@@ -42,10 +43,10 @@ you don't need install anything, only type the web page and start the experience
 </br>
 
 <div>
-  <img width="" height="" src="static/img/ToiletUblime.png" align="right" >
+  <img width="" height="" src="static/img/ToiletUblime.png" align="center" >
 </div>
 
-<p align="center">**********check facilities/forbbiden anr click on Ride me button. You don't need more, It's all, so easy**********</p>
+<p align="center">*******check facilities/forbbiden anr click on Ride me button. You don't need more, It's all, so easy*******</p>
 </br>
 
 ## Roles
