@@ -8,9 +8,11 @@
 </br>
 <p align="center">:colombia:<b>UBLIME</b></p>
 </br>
+<img width="130" height="130" src="static/img/whiteBackground.jpg" align="center" >
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank"><img src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" 
 alt="Ublime web app"></a>
+<img width="130" height="130" src="static/img/whiteBackground.jpg" align="center" >
 
 
 ## Introduccion
