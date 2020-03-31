@@ -17,7 +17,7 @@ Ublime is an application web that help you when you have physiological emergency
 
 ## Check Ublime blogs
 Sebastian and Yesid wrote some interesting experiences during Ublime develop, if you feel curios check their blogs
-|             File               |             Description                  |
+|             Blog               |             Author                  |
 |--------------------------------| ---------------------------------------- |
 |**https://medium.com/@948/my-experience-building-ublime-app-5a2ee6d21725**| by Sebastian Montealegre|
 |**https://medium.com/@944/ublime-web-application-280929825a3d**| by Yesid Gutierrez|
@@ -26,23 +26,40 @@ Sebastian and Yesid wrote some interesting experiences during Ublime develop, if
 you don't need install anything, only type the web page and start the experience www.hereisublimepage.com
 <p align="center"><b>Quick Guide</b></p>
 <div>
-<img width="" height="" src="static/img/Ublimestart.png" align="" >
+<img width="" height="" src="static/img/Ublimestart.png" align="center" >
 </div>
 <p align="center">Share your position</p>
 <div>
-<img width="" height="" src="static/img/UblimeMap.png" align="" >
+</br>
+<img width="" height="" src="static/img/UblimeMap.png" align="center" >
 </div>
 <p align="center">Choice one of the Three, shows in the map</p>
 <div>
-<img width="" height="" src="static/img/ToiletUblime.png" align="" >
+</br>
+<img width="" height="" src="static/img/ToiletUblime.png" align="center" >
 </div>
-<p align="center">check facilities/forbbiden anr click on Ride me button</p>
-You don't need more, It's all, so easy.
+<p align="center">check facilities/forbbiden anr click on Ride me button. You don't need more, It's all, so easy.</p>
+</br>
 
+## Roles
+- Provider: If you have a restroom/toilet to give service, you can register like a provider
+- User: You don't need to register.
 ## Contributing
--- Sebastian Montealegre - Holberton Student, future full stack software engineer
--- Yesid Gutierrez - Holberton Student, future full stack software engineer                                          
-## Related projects
+
+|             Name               |             GitHub                  |             LinkedIn                |
+|--------------------------------| ------------------------------------|-------------------------------------|
+|**Juan Sebastian Montealegre**| https://github.com/SebastianCalle|https://www.linkedin.com/in/juan-sebastian-calle/
+|**Yesid Gutierrez**|https://github.com/Yesidh|https://www.linkedin.com/in/yesid-gutierrez-9577a5b3/|
+
+## Build With
+- Python: Backend language
+- django/leaflet: Web development Framework
+- Postgres/Postgis - Database
+- Bootstrap - Frontend
+- JavaScript - Frontend
+
+## Future
+Create own restrooms for Ublime
 
 ## Licensing
-Free for everyone
+This project is licensed under the MIT License
