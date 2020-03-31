@@ -11,20 +11,20 @@
   " target="_blank"><img width="900" height="480" src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" alt="Ublime web app"></a>
   <p align="center">**********click on the image for a video demonstration**********</p>
 </div>
-
 </br>
+
 ## Introduccion
 Ublime is an application web that help you when you have physiological emergency, so easy to use. Share your geoposition, Ublime search for you three near restroom/toilets and finally start your path.
-
 </br>
+
 ## Check Ublime blogs
 Sebastian and Yesid wrote some interesting experiences during Ublime develop, if you feel curios check their blogs
 |             Blog               |             Author                  |
 |--------------------------------| ---------------------------------------- |
 |**https://medium.com/@948/my-experience-building-ublime-app-5a2ee6d21725**| by Sebastian Montealegre|
 |**https://medium.com/@944/ublime-web-application-280929825a3d**| by Yesid Gutierrez|
-
 </br>
+
 ## Installation/Use
 you don't need install anything, only type the web page and start the experience www.hereisublimepage.com
 
