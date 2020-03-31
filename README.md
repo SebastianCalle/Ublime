@@ -8,7 +8,7 @@
 <div align="center">
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank"><img width="900" height="480" src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" alt="Ublime web app"></a>
-<p align="center">click on the image above for a video demonstration</p>
+<p align="center">click on the image for a video demonstration</p>
 </div>
 
 
@@ -16,36 +16,18 @@
 
 Ublime is an app that help you to find a restroom/toilet near to you.
 
-## Installing
-
-for have the code in your local machine you only need download the code files and put it into a directory.
-## Built With
-
-All the code was write under ubuntu 14.04 using the compiler version            
-
-
-## Contributing
-
--- Yesid Gutierrez - Holberton Student                                          
-
-## Versioning
-for my learning in Holberton School
-
-## Authors
-
----Juan Sebastian Montealegre 948@holbertonschool.com
----Yesid Gutierrez  944@holbertonshcool.com                                    
-
-Project Name
-Introduction
-Must include link to your deployed site, final project blog article, author(s) LinkedIn
-Installation
-Usage
-Contributing
-Related projects
-Licensing
-
-## Files
+## Check Ublime blogs
 
 |             File               |             Description                  |
 |--------------------------------| ---------------------------------------- |
+|**https://medium.com/@948/my-experience-building-ublime-app-5a2ee6d21725**| by Sebastian Montealegre|
+|**https://medium.com/@944/ublime-web-application-280929825a3d**| by Yesid Gutierrez|
+
+## Installation
+
+## Contributing
+-- Sebastian Montealegre - Holberton Student
+-- Yesid Gutierrez - Holberton Student                                          
+## Related projects
+## Licensing
+Free for everyone
