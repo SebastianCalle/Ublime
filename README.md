@@ -8,6 +8,7 @@
 <div align="center">
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=3q8mkka59KU
 " target="_blank"><img width="900" height="480" src="http://img.youtube.com/vi/3q8mkka59KU/0.jpg" alt="Ublime web app"></a>
+<p align="center">click on the image above for a video demonstration</p>
 </div>
 
 
