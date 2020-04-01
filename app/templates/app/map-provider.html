@@ -1,10 +1,20 @@
 {% load static %}
 <script>
+      var map = L.map('map').setView([4.6097102, -74.081749], 18);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 22,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoidWJsaW1lIiwiYSI6ImNrN2ZhaWR4MjAweDgzZXM2NGVuZHdzZDEifQ.hbjfd0TkNuvnmb0zW-dFKg'
+      }).addTo(map);
+      map_init_basic(map);
+      // check if using app from movil or pc
       let movil = false;
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
            movil = true;
         }
-
       // Marker default
       let defaultMarker = L.icon({
           iconUrl: "{% static 'img/marker.png' %}",
@@ -15,12 +25,11 @@
           iconUrl: "{% static 'img/marker-active.png' %}",
           iconSize:     [30, 30],
       });
-
+      // Marker current position
       let personalMarker = L.icon({
           iconUrl: "{% static 'img/marker-personal.png' %}",
           iconSize:     [30, 30],
       });
-
 
       // function that put the markers into the map
       function map_init_basic (map, options) {
@@ -51,6 +60,7 @@
        }
       location(map);
       let position;
+      // function for have latitude and longitude
       function onClick (e) {
         position = e.latlng;
         document.getElementById("id_latitude").value = position['lat']

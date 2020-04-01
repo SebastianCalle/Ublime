@@ -4,11 +4,27 @@
 {% load crispy_forms_tags %}
 
 {% block head %}
-    {% leaflet_js %}
-    {% leaflet_css %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
     <style type="text/css"  >
       .leaflet-control-attribution{
         display: none;
+        width:  600px;
+        height: 400px;
+      }
+      .leaflet-container {  /* all maps */
+        width:  1100px;
+        height: 500px;
+      }
+      #map {
+
+        width:  1100px;
+        height: 500px;
       }
     </style>
 {% endblock head %}
@@ -17,10 +33,10 @@
     <div class="row">
       <div class="col-12">
         <h2 class="text-center display-3">Create a toilet</h2>
-        <div class="col-12">
-          {% leaflet_map "map" callback="window.map_init_basic" %}
-        </div>
+        <!-- load the map  -->
+        <div id="map"></div>
 
+        <!-- form for register a toilet -->
         <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
            <div class="row mt-5">
           <div class="form-group col-12 mb-0">
@@ -51,7 +67,7 @@
             {{ form.longitude.as_hidden }}
           </div>
           <button type="submit" class="save btn btn-info">Save</button>
-          <a href={% url 'home' %} class="btn btn-outline-danger">Cancel</a>
+          <a href={% url 'dashboard' %} class="btn btn-outline-danger">Cancel</a>
         </form>
       </div>
     </div>

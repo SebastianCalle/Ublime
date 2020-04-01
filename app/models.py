@@ -8,8 +8,8 @@ from django.conf import settings
 from django.contrib.gis.db import  models as geo_models
 
 
-# Create your models here.
 class Toilet(models.Model):
+    # Model for storage toilet
     toilet_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.CASCADE)
     address = models.CharField(max_length=200, null=True)

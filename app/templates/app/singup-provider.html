@@ -2,7 +2,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<<div class="container">
+
+<div class="container">
  	 <div class="card bg-light mt-5 pt-5">
 		 <article class="card-body mx-auto" style="max-width: 400">
   			<h4 class="card-title mt-3 text-center">Create Account as Provider</h4>
@@ -11,15 +12,16 @@
   				<a href="" class="btn btn-block btn-primary">Sing Up with Google</a>
   				<a href="" class="btn btn-block btn-primary">Sing Up with Facebook</a>
   			</p>
-  			<p class="divider-text text-center>
+  			<p class="divider-text text-center">
           		<span class="bg-light">OR</span>
      		 </p>
          <div class="container">
             <p>{{ form.errors }}</p>
          </div>
+         <!-- form for register provider -->
   			<form method="POST" action="">
-				{% csrf_token %}
-                {{ form.username | as_crispy_field }}
+				    {% csrf_token %}
+            {{ form.username | as_crispy_field }}
             <div class="row">
                 <div class="col-6">
                     {{ form.first_name | as_crispy_field }}
@@ -28,11 +30,12 @@
                     {{ form.last_name | as_crispy_field }}
                 </div>
             </div>
-                {{ form.email | as_crispy_field }}
-                {{ form.password1 | as_crispy_field }}
-                {{ form.password2 | as_crispy_field }}
-                <button type="submit" class="save btn btn-info">Send</button>
-		 	</form>
+            {{ form.email | as_crispy_field }}
+            {{ form.password1 | as_crispy_field }}
+            {{ form.password2 | as_crispy_field }}
+            <button type="submit" class="save btn btn-info">Send</button>
+            <a href="{% url 'loginPage' %}" class="btn btn-success">Log In</a>
+		 	  </form>
 		 </article>
 	 </div>
 </div>

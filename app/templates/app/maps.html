@@ -1,10 +1,20 @@
 {% load static %}
    <script>
+      var map = L.map('map').setView([4.6097102, -74.081749], 13);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoidWJsaW1lIiwiYSI6ImNrN2ZhaWR4MjAweDgzZXM2NGVuZHdzZDEifQ.hbjfd0TkNuvnmb0zW-dFKg'
+      }).addTo(map);
+
+       // check if using app from movil or pc
       let movil = false;
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
            movil = true;
         }
-
       // Marker default
       let defaultMarker = L.icon({
           iconUrl: "{% static 'img/marker.png' %}",
@@ -15,13 +25,12 @@
           iconUrl: "{% static 'img/marker-active.png' %}",
           iconSize:     [30, 30],
       });
-
+      // Marker current position
       let personalMarker = L.icon({
           iconUrl: "{% static 'img/marker-personal.png' %}",
           iconSize:     [30, 30],
       });
-
-
+      map_init_basic(map);
       // function that put the markers into the map
       function map_init_basic (map, options) {
         function location (map) {
@@ -33,13 +42,10 @@
                 map.removeLayer(current_position);
                 map.removeLayer(current_accuracy);
             }
-
             let radius = e.accuracy / 2;
-
             current_position = L.marker(e.latlng, { icon: personalMarker}).addTo(map)
             current_accuracy = L.circle(e.latlng, radius).addTo(map);
           }
-
           function onLocationError(e) {
             alert(e.message);
           }
@@ -52,6 +58,7 @@
           // call locate every 3 seconds... forever
           setInterval(locate, 3000);
        }
+       // put the markers in the map
       {% for obj in objects %}
         marker = L.marker([{{obj.location.y}}, {{ obj.location.x }}], { icon: defaultMarker, direction: '{{ obj.address }}', img_1: '{{ obj.image_1 }}', img_2: '{{ obj.image_2 }}', img_3: '{{ obj.image_3 }}',  description: '{{ obj.description }}', accesibility: '{{ obj.accesibility }}'});
         marker.on('click', onClick);
@@ -81,6 +88,7 @@
         let desc = $('.description').html(info.description);
         let accesibility = $('.accesibility').html(info.accesibilityA);
       } else {
+        // show aler in the mobile
         Swal.fire({
           title: info.direction,
           imageUrl: "static/" + info.image,
