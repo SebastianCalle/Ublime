@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     # third
     'django.contrib.gis',
     'crispy_forms',
-    'leaflet',
     'app',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
