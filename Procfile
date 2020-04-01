@@ -1,1 +1,2 @@
-web:gunicorn ublime.wsgi
+web: gunicorn ublime.wsgi --log-file -
+
